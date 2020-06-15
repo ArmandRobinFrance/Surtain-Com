@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Surtain-Com</string>
+    <string name="version">V01.00.00</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Mairie de Surtainville (2020-2026)</string>
+    <string name="nav_header_subtitle">contact@Surtainville.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Paramètres</string>
+
+    <!-- MENU -->
+    <string name="menu_home">Mairie 2020-2026</string>
+    <string name="menu_horaire">Horaires</string>
+    <string name="menu_slideshow">Comptes rendus</string>
+    <string name="menu_commissions">Commissions</string>
+    <string name="menu_vie_scolaire">Vie scolaire</string>
+    <string name="menu_nos_commerces">Nos commerces</string>
+    <string name="menu_arretes">Arrêtés municipaux</string>
+    <string name="menu_partenaires">Nos partenaires</string>
+    <string name="menu_apropos">A propos</string>
+
+    <!-- A propos -->
+    <string name="apropos_vide">...</string>
+    <string name="apropos_data_version">...</string>
+    <string name="apropos_region">Région : </string>
+    <string name="apropos_departement">Département : </string>
+    <string name="apropos_prefet">Préfet : </string>
+    <string name="apropos_lien_departement">http://www.manche.gouv.fr</string>
+    <string name="apropos_communaute">Communauté d&quot; agglomération : </string>
+    <string name="apropos_canton">Canton : </string>
+    <string name="apropos_lien_canton">https://fr.wikipedia.org/wiki/Liste_des_cantons_de_la_Manche</string>
+    <string name="apropos_ville">Ville : </string>
+    <string name="apropos_localisation">https://www.geoportail.gouv.fr/carte?c=-1.764455945902185,49.45349124182877</string>
+    <string name="apropos_libelle">libelle</string>
+    <string name="apropos_mairie">Mairie</string>
+    <string name="apropos_maire">Nom du maire</string>
+    <string name="apropos_1_adjoint">Nom du 1er adjoint</string>
+    <string name="apropos_2_adjoint">Nom du 2eme adjoint</string>
+    <string name="apropos_3_adjoint">Nom du 3eme adjoint</string>
+    <string name="apropos_4_adjoint">Nom du 4eme adjoint</string>
+    <string name="apropos_commission">Commissions</string>
+    <string name="apropos_1_commission">...</string>
+    <string name="apropos_2_commission">...</string>
+    <string name="apropos_3_commission">...</string>
+    <string name="apropos_4_commission">...</string>
+    <string name="apropos_5_commission">...</string>
+    <string name="apropos_6_commission">...</string>
+    <string name="apropos_7_commission">...</string>
+    <string name="apropos_8_commission">...</string>
+    <string name="apropos_9_commission">...</string>
+    <string name="apropos_10_commission">...</string>
+    <string name="apropos_dev">Développement</string>
+    <string name="apropos_developpeur">Armand ROBIN</string>
+    <!-- NOTIFICATION -->
+    <string name="channel_name">channel_name</string>
+    <string name="channel_description">channel_description</string>
+
+    <!-- ... -->
+</resources>

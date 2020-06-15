@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="fr.robin.android.surtain_com.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_horaire"
+        android:name="fr.robin.android.surtain_com.ui.horaire.HoraireFragment"
+        android:label="@string/menu_horaire"
+        tools:layout="@layout/fragment_horaire">
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_horaire" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_vie_scolaire"
+        android:name="fr.robin.android.surtain_com.ui.viescolaire.VieScolaireFragment"
+        android:label="@string/menu_vie_scolaire"
+        tools:layout="@layout/fragment_vie_scolaire" />
+
+    <!--fragment
+        android:id="@+id/nav_commission"
+        android:name="fr.robin.android.surtain_com.ui.gallery.GalleryFragment"
+        android:label="@string/menu_commissions"
+        tools:layout="@layout/fragment_gallery" />
+
+
+
+    <fragment
+        android:id="@+id/nav_nos_commerces"
+        android:name="fr.robin.android.surtain_com.ui.gallery.GalleryFragment"
+        android:label="@string/menu_nos_commerces"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_menu_arretes"
+        android:name="fr.robin.android.surtain_com.ui.gallery.GalleryFragment"
+        android:label="@string/menu_arretes"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_menu_partenaires"
+        android:name="fr.robin.android.surtain_com.ui.gallery.GalleryFragment"
+        android:label="@string/menu_partenaires"
+        tools:layout="@layout/fragment_gallery" /-->
+
+    <fragment
+        android:id="@+id/nav_apropos"
+        android:name="fr.robin.android.surtain_com.ui.apropos.AproposFragment"
+        android:label="@string/menu_apropos"
+        tools:layout="@layout/fragment_apropos">
+    </fragment>
+
+</navigation>

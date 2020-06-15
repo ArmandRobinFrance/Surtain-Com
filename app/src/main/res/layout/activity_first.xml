@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_first_activity"
+    android:gravity="center|center_horizontal|top|center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewMairie1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Surtain-Com"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="347dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/logo1" />
+
+
+    <TextView
+        android:id="@+id/textViewMairie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Commune de Surtainville"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@mipmap/commune" />
+
+    <TextView
+        android:id="@+id/textViewAnnee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="..."
+        android:textColor="#FFFFFF"
+        android:textSize="36sp" />
+
+</LinearLayout>
