@@ -24,7 +24,7 @@ public class VieScolaireFragment extends GenericFragment {
         View root = inflater.inflate(R.layout.fragment_vie_scolaire, container, false);
         //Lecture BDD
         this.databaseHelper = getHelper();
-        List<Article> listeArticle = this.databaseHelper.selectArticle(Categorie.CATEGORIE_VIE_SCOLAIRE);
+        List<Article> listeArticle = null;//this.databaseHelper.selectArticle(Categorie.CATEGORIE_VIE_SCOLAIRE);
         if(listeArticle != null) {
             listeView = (ListView) root.findViewById(R.id.historique_listview);
             VieScolaireAdapter adapter = new VieScolaireAdapter(this.getActivity(), listeArticle);

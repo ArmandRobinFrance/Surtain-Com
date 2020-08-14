@@ -63,7 +63,14 @@ public class Data {
                 String[] elements = s3.split(";");
                 String login = elements[0];
                 String password = elements[1];
+                //Traitement UTL
                 String url = elements[2];
+                int c3 = url.indexOf(">");
+                if(c3 > 0) {
+                    int c4 = url.indexOf("<",1);
+                    url = s1.substring(c3,c4);
+                }
+                //Catégorie
                 String categorie = elements[3];
                 //Login et password, URL, id categorie ANDROID
                 SiteClient client = new SiteClient(login,password,url,Integer.parseInt(categorie));

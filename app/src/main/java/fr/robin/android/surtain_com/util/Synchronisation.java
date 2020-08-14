@@ -160,7 +160,7 @@ public class Synchronisation {
         try {
             URL u = new URL(this.siteClient.getUrl() + url);
             c = (HttpURLConnection) u.openConnection();
-            String userpass = this.siteClient.getLoginPassword();//"COM:1111";
+            String userpass = this.siteClient.getLogin()+":"+this.siteClient.getPassword();//"COM:1111";
             String basicAuth = "Basic " + new String(Base64.getEncoder().encode(userpass.getBytes()));
             c.setRequestProperty ("Authorization", basicAuth);
             c.setRequestMethod("GET");

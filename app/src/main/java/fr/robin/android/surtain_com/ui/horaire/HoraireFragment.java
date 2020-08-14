@@ -32,7 +32,7 @@ public class HoraireFragment extends GenericFragment {
         View root = inflater.inflate(R.layout.fragment_horaire, container, false);
         //Lecture BDD
         this.databaseHelper = getHelper();
-        List<Article> listeArticle = this.databaseHelper.selectArticle(Categorie.WORDPRESS_CATEGORIE_HORAIRE);
+        List<Article> listeArticle = null;//this.databaseHelper.selectArticle(Categorie.WORDPRESS_CATEGORIE_HORAIRE);
         if(listeArticle != null) {
             listeView = (ListView) root.findViewById(R.id.historique_listview);
             HoraireAdapter adapter = new HoraireAdapter(this.getActivity(), listeArticle);

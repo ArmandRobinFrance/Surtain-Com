@@ -1,7 +1,6 @@
 package fr.robin.android.surtain_com.util;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
@@ -9,13 +8,11 @@ import android.widget.Toast;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import fr.robin.android.surtain_com.data.Article;
 import fr.robin.android.surtain_com.data.Cache;
-import fr.robin.android.surtain_com.data.Categorie;
 import fr.robin.android.surtain_com.data.SiteClient;
-
-import static android.content.Context.MODE_PRIVATE;
 
 public class SynchronisationTask extends AsyncTask<Object, Integer, Integer> {
         private DatabaseHelper databaseHelper;
@@ -45,6 +42,12 @@ public class SynchronisationTask extends AsyncTask<Object, Integer, Integer> {
                     lireArticle(synchroGestion, AuthorisationClient.CATEGORIE_SERVEUR_ANDROID);
                     fr.robin.android.surtain_com.models.bo.Article articleAndroidAuthorisation = this.databaseHelper.selectArticle(AuthorisationClient.CATEGORIE_SERVEUR_ANDROID, Cache.ANDROID_AUTHORISATION);
                     HashMap<String, SiteClient> listeClient = Data.getDataAuthorisation(articleAndroidAuthorisation.getCorps());
+                    //Liste des clients
+                    for(Map.Entry<String, SiteClient> entry : listeClient.entrySet()) {
+                        String key = entry.getKey();
+                        SiteClient value = entry.getValue();
+                        Log.d("MAIRIE COM - SynchronisationTask client",key);
+                    }
                     //URL pour le client
                     siteClient = listeClient.get("SURTAINVILLE");
                 }
