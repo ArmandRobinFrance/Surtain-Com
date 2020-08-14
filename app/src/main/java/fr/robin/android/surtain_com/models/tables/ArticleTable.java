@@ -2,8 +2,6 @@ package fr.robin.android.surtain_com.models.tables;
 
 public class ArticleTable extends GenericTable {
     public static final String TABLE_NOM = "Article";
-
-
     public static final String TABLE_ID = "id_article";
     public static final String PARAM_LIBELLE = "libelle";
     public static final String PARAM_VALEUR = "valeur";

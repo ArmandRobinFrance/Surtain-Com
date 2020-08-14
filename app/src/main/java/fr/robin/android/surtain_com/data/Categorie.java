@@ -1,14 +1,12 @@
 package fr.robin.android.surtain_com.data;
 
+/**
+ * Liste des catégories
+ */
 public class Categorie {
-    public static int WORDPRESS_CATEGORIE_ANDROID = 19;
-    public static int WORDPRESS_CATEGORIE_NOTIFICATION = 5;
-    public static int WORDPRESS_CATEGORIE_HORAIRE = 17;
-    public static int CATEGORIE_VIE_SCOLAIRE = 18;
-    public static int CATEGORIE_NOS_COMMERCE = 0;
-    public static int CATEGORIE_ARRETES_MUNICIPAUX = 0;
-    public static int CATEGORIE_NOS_PARTENAIRES = 0;
-    public static int CATEGORIE_NOTIFICATION = 0;
+    public static String WORDPRESS_CATEGORIE_ANDROID = "ANDROID";
+    public static String WORDPRESS_CATEGORIE_CLES_PUBLIC = "CLES_PUBLIC";
+    public static String WORDPRESS_CATEGORIE_APROPOS = "APROPOS";
 
     private int id;
     private String name;

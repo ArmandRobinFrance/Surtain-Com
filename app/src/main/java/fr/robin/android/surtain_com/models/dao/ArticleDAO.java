@@ -127,12 +127,12 @@ public class ArticleDAO extends EntityDAO {
 	/**
 	 * Select by categorie
 	 */
-	public Article getByCategorieTitre(int _categorie,String titre){
+	public Article getByCategorieTitre(int _categorie,String _titre){
 		Article entity = null;
 		Cursor c = null;
 		try{
-			//c = bdd.rawQuery(ArticleTable.TABLE_SELECT_CATEGORIE_TITRE, new String[]{String.valueOf(_categorie),titre});
-			c = bdd.rawQuery(ArticleTable.TABLE_SELECT_CATEGORIE, new String[]{String.valueOf(_categorie)});
+			c = bdd.rawQuery(ArticleTable.TABLE_SELECT_CATEGORIE_TITRE, new String[]{String.valueOf(_categorie),_titre});
+			//c = bdd.rawQuery(ArticleTable.TABLE_SELECT_CATEGORIE, new String[]{String.valueOf(_categorie)});
 			ArrayList<Article> entities = cursorToEnties(c);
 			if(entities!= null) {
 				entity = entities.get(0);

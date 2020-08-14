@@ -40,31 +40,25 @@ public class SynchronisationTask extends AsyncTask<Object, Integer, Integer> {
                 //...
                 //SERVEUR GESTION Pilote pour tous les clients
                 if(siteClient == null) {
-                    SiteClient siteAuthorisation = new SiteClient(AuthorisationClient.LOGIN_PASSWORD_SERVEUR_GESTION,AuthorisationClient.URL_SERVEUR_GESTION);
+                    SiteClient siteAuthorisation = new SiteClient(AuthorisationClient.LOGIN_SERVEUR_GESTION,AuthorisationClient.PASSWORD_SERVEUR_GESTION,AuthorisationClient.URL_SERVEUR_GESTION,AuthorisationClient.CATEGORIE_SERVEUR_ANDROID);
                     Synchronisation synchroGestion = new Synchronisation(context,siteAuthorisation);
-                    lireArticle(synchroGestion, Categorie.WORDPRESS_CATEGORIE_ANDROID);
-                    fr.robin.android.surtain_com.models.bo.Article articleAndroidAuthorisation = this.databaseHelper.selectArticle(Categorie.WORDPRESS_CATEGORIE_ANDROID, Cache.ANDROID_AUTHORISATION);
+                    lireArticle(synchroGestion, AuthorisationClient.CATEGORIE_SERVEUR_ANDROID);
+                    fr.robin.android.surtain_com.models.bo.Article articleAndroidAuthorisation = this.databaseHelper.selectArticle(AuthorisationClient.CATEGORIE_SERVEUR_ANDROID, Cache.ANDROID_AUTHORISATION);
                     HashMap<String, SiteClient> listeClient = Data.getDataAuthorisation(articleAndroidAuthorisation.getCorps());
-                    //JURL pour le client
+                    //URL pour le client
                     siteClient = listeClient.get("SURTAINVILLE");
                 }
-                //VERIFICTAION
+                //VERIFICATION
                 if(siteClient == null){
                     return null;
                 }
                 //Acces DISTANT au site CLIENT ...
                 synchroCLIENT = new Synchronisation(context, siteClient);
-                //CLIENT : Liste des catégories
-                synchroCLIENT.getCategories();
-                //Liste des utilisateurs
-                //synchroCLIENT.getUtilisateurs();
-                //Liste des articles catégorie notification
-                //lireArticle(syncro, Categorie.WORDPRESS_CATEGORIE_NOTIFICATION);
+                //Article APROPOS
                 //Liste ARTICLES HORAIRE
-                lireArticle(synchroCLIENT, Categorie.WORDPRESS_CATEGORIE_HORAIRE);
+                //lireArticle(synchroCLIENT, Categorie.WORDPRESS_CATEGORIE_HORAIRE);
                 //Liste ARTICLES Vie Scolaire
-                lireArticle(synchroCLIENT, Categorie.CATEGORIE_VIE_SCOLAIRE);
-                //
+                //lireArticle(synchroCLIENT, Categorie.CATEGORIE_VIE_SCOLAIRE);
                 Thread.sleep(1000);
             }catch(Exception e){
                 e.printStackTrace();

@@ -4,17 +4,11 @@ package fr.robin.android.surtain_com.data;
  * Tous les objets transverses
  */
 public class Cache {
-    //WORDPRESS
-    public static String SYNCHRONISATION_WORDPRESS_URL = "http://www.lemaitre-robin.fr";
-    public static String SYNCHRONISATION_WORDPRESS_LOGIN = "COM";
-    public static String SYNCHRONISATION_WORDPRESS_PWD = "1111";
-    //CATEGORIES
-
     //ANDROID CLES
-    public static String ANDROID_AUTHORISATION = "Cles public";
+    public static String ANDROID_AUTHORISATION = "CLES_PUBLIC";
 
     //ANDROID Apropos
-    public static String ANDROID_APROPOS = "A propos";
+    public static String ANDROID_APROPOS = "APROPOS";
     public static String ANDROID_APROPOS_REGION = "REGION";
     public static String ANDROID_APROPOS_DEPARTEMENT = "DEPARTEMENT";
     public static String ANDROID_APROPOS_PREFET = "PREFET";
