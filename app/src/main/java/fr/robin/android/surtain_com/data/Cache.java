@@ -6,7 +6,8 @@ package fr.robin.android.surtain_com.data;
 public class Cache {
     //ANDROID CLES
     public static String ANDROID_AUTHORISATION = "CLES_PUBLIC";
-
+    //Site client
+    public static SiteClient siteClient = null;
     //ANDROID Apropos
     public static String ANDROID_APROPOS = "APROPOS";
     public static String ANDROID_APROPOS_REGION = "REGION";

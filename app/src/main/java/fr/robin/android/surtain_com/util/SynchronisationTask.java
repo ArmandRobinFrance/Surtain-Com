@@ -12,6 +12,7 @@ import java.util.Map;
 
 import fr.robin.android.surtain_com.data.Article;
 import fr.robin.android.surtain_com.data.Cache;
+import fr.robin.android.surtain_com.data.Categorie;
 import fr.robin.android.surtain_com.data.SiteClient;
 
 public class SynchronisationTask extends AsyncTask<Object, Integer, Integer> {
@@ -21,23 +22,22 @@ public class SynchronisationTask extends AsyncTask<Object, Integer, Integer> {
         private Synchronisation synchroGestion = null;
         //CLIENT
         private Synchronisation synchroCLIENT = null;
-        private SiteClient siteClient = null;
 
         @Override
         protected Integer doInBackground(Object... params) {
+            Log.d("MAIRIE COM - SynchronisationTask", "Start");
             // for debug worker thread
             if(android.os.Debug.isDebuggerConnected()) {
                 android.os.Debug.waitForDebugger();
             }
-            Log.v("MAIRIE COM - SynchronisationTask", "Start");
             this.context = (Context) params[0];
             this.databaseHelper = (DatabaseHelper) params[1];
             try {
                 //On regarde en BDD s'il la configuration existe !
                 //...
                 //SERVEUR GESTION Pilote pour tous les clients
-                if(siteClient == null) {
-                    SiteClient siteAuthorisation = new SiteClient(AuthorisationClient.LOGIN_SERVEUR_GESTION,AuthorisationClient.PASSWORD_SERVEUR_GESTION,AuthorisationClient.URL_SERVEUR_GESTION,AuthorisationClient.CATEGORIE_SERVEUR_ANDROID);
+                if(Cache.siteClient == null) {
+                    SiteClient siteAuthorisation = new SiteClient("Lemaitre-robin",AuthorisationClient.LOGIN_SERVEUR_GESTION,AuthorisationClient.PASSWORD_SERVEUR_GESTION,AuthorisationClient.URL_SERVEUR_GESTION,AuthorisationClient.CATEGORIE_SERVEUR_ANDROID);
                     Synchronisation synchroGestion = new Synchronisation(context,siteAuthorisation);
                     lireArticle(synchroGestion, AuthorisationClient.CATEGORIE_SERVEUR_ANDROID);
                     fr.robin.android.surtain_com.models.bo.Article articleAndroidAuthorisation = this.databaseHelper.selectArticle(AuthorisationClient.CATEGORIE_SERVEUR_ANDROID, Cache.ANDROID_AUTHORISATION);
@@ -49,19 +49,24 @@ public class SynchronisationTask extends AsyncTask<Object, Integer, Integer> {
                         Log.d("MAIRIE COM - SynchronisationTask client",key);
                     }
                     //URL pour le client
-                    siteClient = listeClient.get("SURTAINVILLE");
+                    Cache.siteClient = listeClient.get("SURTAINVILLE");
                 }
                 //VERIFICATION
-                if(siteClient == null){
+                if(Cache.siteClient == null){
                     return null;
                 }
                 //Acces DISTANT au site CLIENT ...
-                synchroCLIENT = new Synchronisation(context, siteClient);
-                //Article APROPOS
-                //Liste ARTICLES HORAIRE
-                //lireArticle(synchroCLIENT, Categorie.WORDPRESS_CATEGORIE_HORAIRE);
-                //Liste ARTICLES Vie Scolaire
-                //lireArticle(synchroCLIENT, Categorie.CATEGORIE_VIE_SCOLAIRE);
+                synchroCLIENT = new Synchronisation(context, Cache.siteClient);
+                //VERIFICATION
+                if(!synchroCLIENT.isDisponible()){
+                    Log.d("MAIRIE COM - SynchronisationTask client","site " + Cache.siteClient.getNom() + " indisponible !");
+                    return null;
+                }else{
+                    Log.d("MAIRIE COM - SynchronisationTask client","site " + Cache.siteClient.getNom() + " disponible.");
+                }
+                //Les articles web client de la catégorie ANDROID
+                lireArticle(synchroCLIENT, Cache.siteClient.getCategorieAndroid());
+                //Tempo
                 Thread.sleep(1000);
             }catch(Exception e){
                 e.printStackTrace();
@@ -69,7 +74,7 @@ public class SynchronisationTask extends AsyncTask<Object, Integer, Integer> {
             }finally {
                 //databaseHelper.close();
             }
-            Log.v("MAIRIE COM - SynchronisationTask", "fin");
+            Log.d("MAIRIE COM - SynchronisationTask", "fin");
             return null;
         }
 

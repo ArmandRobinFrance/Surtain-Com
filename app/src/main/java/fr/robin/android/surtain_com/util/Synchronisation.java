@@ -45,6 +45,20 @@ public class Synchronisation {
     }
 
     /**
+     *
+     * @return
+     */
+    public boolean isDisponible(){
+        boolean result = false;
+        try {
+            String data = getJSON("/wp-json/wp/v2/categories?_fields=id,name,description");
+            result = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+    /**
      *  Liste des catégories
      * @throws IOException
      */
@@ -160,7 +174,7 @@ public class Synchronisation {
         try {
             URL u = new URL(this.siteClient.getUrl() + url);
             c = (HttpURLConnection) u.openConnection();
-            String userpass = this.siteClient.getLogin()+":"+this.siteClient.getPassword();//"COM:1111";
+            String userpass = this.siteClient.getLogin()+":"+this.siteClient.getPassword();
             String basicAuth = "Basic " + new String(Base64.getEncoder().encode(userpass.getBytes()));
             c.setRequestProperty ("Authorization", basicAuth);
             c.setRequestMethod("GET");
@@ -169,7 +183,7 @@ public class Synchronisation {
             c.setAllowUserInteraction(false);
             c.connect();
             int status = c.getResponseCode();
-            Log.d("MAIRIE COM getJSON", "Return status -> " + c.getResponseMessage());
+            //Log.d("MAIRIE COM - getJSON", "Return status -> " + c.getResponseMessage());
             switch (status) {
                 case 200:
                 case 201:
@@ -183,7 +197,7 @@ public class Synchronisation {
                     return sb.toString();
             }
         } catch (Exception ex) {
-            Log.e("MAIRIE JSON IO exception", ex.getMessage());
+            Log.e("MAIRIE COM - JSON IO exception", ex.getMessage());
         } finally {
             if (c != null) {
                 try {

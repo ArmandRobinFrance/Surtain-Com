@@ -68,17 +68,17 @@ public class Data {
                 int c3 = url.indexOf(">");
                 if(c3 > 0) {
                     int c4 = url.indexOf("<",1);
-                    url = s1.substring(c3,c4);
+                    url = url.substring(c3+1,c4);
                 }
                 //Catégorie
                 String categorie = elements[3];
                 //Login et password, URL, id categorie ANDROID
-                SiteClient client = new SiteClient(login,password,url,Integer.parseInt(categorie));
+                SiteClient client = new SiteClient(site,login,password,url,Integer.parseInt(categorie));
                 data.put(site,client);
             }
         }catch(Exception e){
             e.printStackTrace();
-            Log.e("MAIRIE Data Exception", e.getMessage());
+            Log.e("MAIRIE COM - Data Exception", e.getMessage());
         }
         return data;
     }

@@ -4,9 +4,13 @@ package fr.robin.android.surtain_com.data;
  * Liste des catégories
  */
 public class Categorie {
+    //COMMUN
     public static String WORDPRESS_CATEGORIE_ANDROID = "ANDROID";
+    //SERVEUR
     public static String WORDPRESS_CATEGORIE_CLES_PUBLIC = "CLES_PUBLIC";
+    //CLIENT
     public static String WORDPRESS_CATEGORIE_APROPOS = "APROPOS";
+    public static int WORDPRESS_CATEGORIE_APROPOS_ID = 1;
 
     private int id;
     private String name;
