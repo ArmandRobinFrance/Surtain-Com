@@ -8,6 +8,7 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
+        <!--
         <item
             android:id="@+id/nav_horaire"
             android:icon="@drawable/ic_menu_horloge"
@@ -32,6 +33,7 @@
             android:id="@+id/nav_partenaires"
             android:icon="@drawable/ic_supervisor_account_black_18dp"
             android:title="@string/menu_partenaires" />
+        -->
         <item
             android:id="@+id/nav_apropos"
             android:icon="@drawable/ic_recent_actors_black_18dp"

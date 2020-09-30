@@ -14,7 +14,6 @@
             android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
             app:destination="@id/nav_home" />
     </fragment>
-
     <fragment
         android:id="@+id/nav_horaire"
         android:name="fr.robin.android.surtain_com.ui.horaire.HoraireFragment"
@@ -31,13 +30,11 @@
         android:label="@string/menu_vie_scolaire"
         tools:layout="@layout/fragment_vie_scolaire" />
 
-    <!--fragment
+    <fragment
         android:id="@+id/nav_commission"
         android:name="fr.robin.android.surtain_com.ui.gallery.GalleryFragment"
         android:label="@string/menu_commissions"
         tools:layout="@layout/fragment_gallery" />
-
-
 
     <fragment
         android:id="@+id/nav_nos_commerces"
@@ -55,7 +52,7 @@
         android:id="@+id/nav_menu_partenaires"
         android:name="fr.robin.android.surtain_com.ui.gallery.GalleryFragment"
         android:label="@string/menu_partenaires"
-        tools:layout="@layout/fragment_gallery" /-->
+        tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_apropos"

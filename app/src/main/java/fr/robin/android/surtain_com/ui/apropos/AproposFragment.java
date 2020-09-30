@@ -74,7 +74,7 @@ public class AproposFragment extends GenericFragment {
         //3 adjoint
         UtilView.updateTextView(root, infos, R.id.apropos_3adjoint, Cache.ANDROID_APROPOS_3_ADJOINT);
         //4 adjoint (Masque si pas de données)
-        UtilView.updateTextView(root, infos, R.id.apropos_4adjoint, Cache.ANDROID_APROPOS_4_ADJOINT);
+        //UtilView.updateTextView(root, infos, R.id.apropos_4adjoint, Cache.ANDROID_APROPOS_4_ADJOINT);
         //1 commission (Masque si pas de données)
         UtilView.updateTextView(root, infos, R.id.apropos_1commission, Cache.ANDROID_APROPOS_1_COMMISSION);
         //2 commission (Masque si pas de données)

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#70A0BB</color>
-    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorPrimary">#C1BEBE</color>
+    <color name="colorEcriture">#3F51B5</color>
     <color name="colorAccent">#93DAC5</color>
 
-    <color name="bleu">#70A0BB</color>
+    <color name="bleu">#C3DCE8</color>
     <color name="jaune_tres_clair">#BBFFE500</color>
     <color name="jaune_clair">#99FFE500</color>
     <color name="noir">#000000</color>

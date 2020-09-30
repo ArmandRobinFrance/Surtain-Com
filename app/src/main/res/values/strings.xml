@@ -1,16 +1,16 @@
 <resources>
-    <string name="app_name">Surtain-Com</string>
-    <string name="version">V01.00.00</string>
+    <string name="app_name">SURTAIN-COM</string>
+    <string name="version">V00.00.01</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Mairie de Surtainville (2020-2026)</string>
+    <string name="nav_header_title">Mairie de Surtainville</string>
     <string name="nav_header_subtitle">contact@Surtainville.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Paramètres</string>
 
     <!-- MENU -->
-    <string name="menu_home">Mairie 2020-2026</string>
+    <string name="menu_home">Mairie</string>
     <string name="menu_horaire">Horaires</string>
     <string name="menu_slideshow">Comptes rendus</string>
     <string name="menu_commissions">Commissions</string>
@@ -19,7 +19,8 @@
     <string name="menu_arretes">Arrêtés municipaux</string>
     <string name="menu_partenaires">Nos partenaires</string>
     <string name="menu_apropos">A propos</string>
-
+    <!-- HOME -->
+    <string name="home_texte1">Bonjour,\n\n Merci d\'utiliser notre nouvel outil.\n Cet outil va faire l\'objet d\'évolution.\n\n  \n\n Le Maire, Odile THOMINET." </string>
     <!-- A propos -->
     <string name="apropos_vide">...</string>
     <string name="apropos_data_version">...</string>
