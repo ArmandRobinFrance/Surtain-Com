@@ -2,9 +2,11 @@ package fr.robin.android.surtain_com.ui.home;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,7 +15,12 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import java.util.HashMap;
+
 import fr.robin.android.surtain_com.R;
+import fr.robin.android.surtain_com.data.Cache;
+import fr.robin.android.surtain_com.models.bo.Article;
+import fr.robin.android.surtain_com.util.Data;
 import fr.robin.android.surtain_com.util.DatabaseHelper;
 import fr.robin.android.surtain_com.util.SynchronisationTask;
 
@@ -24,16 +31,30 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =  ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        //
-        new SynchronisationTask().execute(this.getActivity(),this.getHelper());
-        //
-        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
+        try {
+            new SynchronisationTask().execute(this.getActivity(), this.getHelper());
+            //DATA SERVEUR
+            final TextView textView = root.findViewById(R.id.home_page1);
+            String tag = (String) textView.getText();
+            //
+            Article articleAndroidHome = this.databaseHelper.selectArticle(Cache.siteClient.getCategorieAndroid(), tag);
+            //
+            if (articleAndroidHome != null) {
+                String texte = Data.getDataCorp(articleAndroidHome.getCorps());
+                textView.setText(texte);
             }
-        });
+            //
+            final TextView textView2 = root.findViewById(R.id.text_home);
+            homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+                @Override
+                public void onChanged(@Nullable String s) {
+                    textView2.setText(s);
+                }
+            });
+        }catch(Exception e){
+            e.printStackTrace();
+            Log.e("MAIRIE HomeFragment Exception", e.getMessage());
+        }
         return root;
     }
 

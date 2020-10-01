@@ -10,7 +10,7 @@
     <string name="action_settings">Paramètres</string>
 
     <!-- MENU -->
-    <string name="menu_home">Mairie</string>
+    <string name="menu_home">Mairie - SURTAIN-COM</string>
     <string name="menu_horaire">Horaires</string>
     <string name="menu_slideshow">Comptes rendus</string>
     <string name="menu_commissions">Commissions</string>
@@ -20,7 +20,7 @@
     <string name="menu_partenaires">Nos partenaires</string>
     <string name="menu_apropos">A propos</string>
     <!-- HOME -->
-    <string name="home_texte1">Bonjour,\n\n Merci d\'utiliser notre nouvel outil.\n Cet outil va faire l\'objet d\'évolution.\n\n  \n\n Le Maire, Odile THOMINET." </string>
+    <string name="home_texte1">PAGE1</string>
     <!-- A propos -->
     <string name="apropos_vide">...</string>
     <string name="apropos_data_version">...</string>

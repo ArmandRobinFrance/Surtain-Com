@@ -12,8 +12,9 @@ import java.util.Date;
 
 import fr.robin.android.surtain_com.R;
 import fr.robin.android.surtain_com.util.DatabaseHelper;
+import fr.robin.android.surtain_com.util.SynchronisationTask;
 
-public class FirstActivity extends AppCompatActivity {
+public class FirstActivity extends GenericActivity {
 
     private static final int DELAI_AFFICHAGE = 5000;
 
@@ -27,6 +28,9 @@ public class FirstActivity extends AppCompatActivity {
         String annee = dateFormatAnnee.format(aujourdhui);
         TextView textViewAnnee = findViewById(R.id.textViewAnnee);
         textViewAnnee.setText("@Mairie "+annee);
+        //Synchronisation WORDPRESS
+        this.mContext =  this.getApplicationContext();
+        new SynchronisationTask().execute(this,this.getHelper());
         //
         new Handler().postDelayed(new Runnable() {
             @Override

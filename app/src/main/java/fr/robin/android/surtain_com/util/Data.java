@@ -83,4 +83,20 @@ public class Data {
         return data;
     }
 
+    // <pre class></pre>\n\n\n
+    public static String getDataCorp(String corpsArticle){
+        String data = new String("");
+        try{
+            //<pre class="wp-block-preformatted"
+            //String d1 = corpsArticle.replace("'","");
+            String d2 = corpsArticle.substring(37);
+            String d3 = d2.replace("</pre>","");
+            String d4 = d3.replace("<p></p>","");
+            data = d4.substring(0,d4.length()-1);
+        }catch(Exception e){
+            e.printStackTrace();
+            Log.e("MAIRIE COM - Data Exception", e.getMessage());
+        }
+        return data;
+    }
 }

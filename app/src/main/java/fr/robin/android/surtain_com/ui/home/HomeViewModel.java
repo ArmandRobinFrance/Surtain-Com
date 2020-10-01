@@ -10,7 +10,7 @@ public class HomeViewModel extends ViewModel {
 
     public HomeViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("V01.00.00   @Copyright - Mairie de Surtainville");
+        mText.setValue("2020 @Copyright - Mairie de Surtainville");
     }
 
     public LiveData<String> getText() {

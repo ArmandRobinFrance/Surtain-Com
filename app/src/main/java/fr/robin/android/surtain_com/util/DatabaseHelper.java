@@ -2,6 +2,7 @@ package fr.robin.android.surtain_com.util;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import java.util.List;
 
@@ -116,6 +117,10 @@ public class DatabaseHelper {
      * Tous les articles d'une catégorie
      */
     public fr.robin.android.surtain_com.models.bo.Article selectArticle(int categorie,String titre) {
+        if(categorie == 0){
+            Log.e("MAIRIE DatabaseHelper Exception", "Non synchronisé");
+            return null;
+        }
         ArticleDAO dao = new ArticleDAO(this);
         return dao.getByCategorieTitre(categorie,titre);
     }
