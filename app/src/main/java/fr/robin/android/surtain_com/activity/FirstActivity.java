@@ -3,6 +3,7 @@ package fr.robin.android.surtain_com.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,12 +12,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import fr.robin.android.surtain_com.R;
+import fr.robin.android.surtain_com.data.Cache;
 import fr.robin.android.surtain_com.util.DatabaseHelper;
 import fr.robin.android.surtain_com.util.SynchronisationTask;
 
 public class FirstActivity extends GenericActivity {
 
-    private static final int DELAI_AFFICHAGE = 5000;
+    private static final int DELAI_AFFICHAGE = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +34,23 @@ public class FirstActivity extends GenericActivity {
         this.mContext =  this.getApplicationContext();
         new SynchronisationTask().execute(this,this.getHelper());
         //
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                changerActivite();
+        while(Cache.synchroniser == false) {
+            Log.d("MAIRIE COM - First Activity", "En cours ...");
+            try {
+                Thread.sleep(700);
+            }catch(Exception e){
+                Log.e("MAIRIE COM - First Activity", e.getMessage());
             }
-        }, DELAI_AFFICHAGE);
+        }
+        if(Cache.synchroniser) {
+            Log.d("MAIRIE COM - First Activity", "synchroniser");
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        changerActivite();
+                    }
+                }, DELAI_AFFICHAGE);
+        }
     }
 
     //Changer d'activiter

@@ -8,7 +8,7 @@
     <string name="nav_header_subtitle">contact@Surtainville.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Paramètres</string>
-
+    <string name="texte_vide">Transferts en cours avec surtainville.com ...</string>
     <!-- MENU -->
     <string name="menu_home">Mairie - SURTAIN-COM</string>
     <string name="menu_horaire">Horaires</string>

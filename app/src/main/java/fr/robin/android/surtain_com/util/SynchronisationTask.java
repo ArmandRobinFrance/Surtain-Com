@@ -66,8 +66,8 @@ public class SynchronisationTask extends AsyncTask<Object, Integer, Integer> {
                 }
                 //Les articles web client de la catégorie ANDROID
                 lireArticle(synchroCLIENT, Cache.siteClient.getCategorieAndroid());
-                //Tempo
-                Thread.sleep(1000);
+                //Synchro ok
+                Cache.synchroniser = true;
             }catch(Exception e){
                 e.printStackTrace();
                 Log.e("MAIRIE JSON Exception", e.getMessage());

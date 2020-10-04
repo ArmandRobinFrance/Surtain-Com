@@ -32,16 +32,18 @@ public class HomeFragment extends Fragment {
         homeViewModel =  ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         try {
-            new SynchronisationTask().execute(this.getActivity(), this.getHelper());
+            //new SynchronisationTask().execute(this.getActivity(), this.getHelper());
             //DATA SERVEUR
-            final TextView textView = root.findViewById(R.id.home_page1);
-            String tag = (String) textView.getText();
+            final TextView textViewPage1 = root.findViewById(R.id.home_page1);
+            String tag = (String) textViewPage1.getText();
             //
-            Article articleAndroidHome = this.databaseHelper.selectArticle(Cache.siteClient.getCategorieAndroid(), tag);
+            Article articleAndroidHome = this.getHelper().selectArticle(Cache.siteClient.getCategorieAndroid(), tag);
             //
             if (articleAndroidHome != null) {
                 String texte = Data.getDataCorp(articleAndroidHome.getCorps());
-                textView.setText(texte);
+                textViewPage1.setText(texte);
+            }else{
+                textViewPage1.setText(getString (R. string.texte_vide));
             }
             //
             final TextView textView2 = root.findViewById(R.id.text_home);

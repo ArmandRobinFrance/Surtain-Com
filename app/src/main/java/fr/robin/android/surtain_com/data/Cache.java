@@ -4,6 +4,8 @@ package fr.robin.android.surtain_com.data;
  * Tous les objets transverses
  */
 public class Cache {
+    //SYNCHRO effectué
+    public static boolean synchroniser = false;
     //ANDROID CLES
     public static String ANDROID_AUTHORISATION = "CLES_PUBLIC";
     //Site client
