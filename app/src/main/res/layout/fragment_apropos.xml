@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fr.robin.android.surtain_com.ui.apropos.AproposFragment">
+    tools:context="fr.robin.android.surtaincom.ui.apropos.AproposFragment">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

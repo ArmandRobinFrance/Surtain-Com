@@ -5,11 +5,11 @@ android {
     buildToolsVersion "29.0.2"
 
     defaultConfig {
-        applicationId "fr.robin.android.surtain_com"
+        applicationId "fr.robin.android.surtaincom"
         minSdkVersion 26
         targetSdkVersion 29
         versionCode 1
-        versionName "0.0.2"
+        versionName "0.1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fr.robin.android.surtain_com.ui.home.HomeFragment">
+    tools:context="fr.robin.android.surtaincom.ui.home.HomeFragment">
 
     <LinearLayout
         android:id="@+id/Home"

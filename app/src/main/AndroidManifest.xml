@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="fr.robin.android.surtain_com">
+    package="fr.robin.android.surtaincom">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -20,7 +20,7 @@
 
         <!-- FIRST ACTIVITY -->
         <activity
-            android:name=".activity.FirstActivity"
+            android:name="fr.robin.android.surtaincom.activity.FirstActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -30,7 +30,7 @@
         </activity>
         <!-- MAIN ACTIVITY -->
         <activity
-            android:name=".activity.MainActivity"
+            android:name="fr.robin.android.surtaincom.activity.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>

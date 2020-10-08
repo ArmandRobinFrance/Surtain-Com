@@ -11,6 +11,7 @@
     <string name="texte_vide">Transferts en cours avec surtainville.com ...</string>
     <!-- MENU -->
     <string name="menu_home">Mairie - SURTAIN-COM</string>
+    <string name="menu_information">Actualités</string>
     <string name="menu_horaire">Horaires</string>
     <string name="menu_slideshow">Comptes rendus</string>
     <string name="menu_commissions">Commissions</string>
