@@ -21,33 +21,21 @@ public class FirstActivity extends GenericActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
+        //Synchronisation WORDPRESS
+        this.mContext =  this.getApplicationContext();
+        new SynchronisationTask().execute(this,this.getHelper());
         //Date
         SimpleDateFormat dateFormatAnnee = new SimpleDateFormat("yyyy");
         Date aujourdhui = new Date();
         String annee = dateFormatAnnee.format(aujourdhui);
         TextView textViewAnnee = findViewById(R.id.textViewAnnee);
         textViewAnnee.setText("@Mairie "+annee);
-        //Synchronisation WORDPRESS
-        this.mContext =  this.getApplicationContext();
-        new SynchronisationTask().execute(this,this.getHelper());
-        //
-        while(Cache.synchroniser == false) {
-            Log.d("MAIRIE COM - First Activity", "En cours ...");
-            try {
-                //Thread.sleep(10);
-            }catch(Exception e){
-                Log.e("MAIRIE COM - First Activity", e.getMessage());
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                changerActivite();
             }
-        }
-        if(Cache.synchroniser) {
-            Log.d("MAIRIE COM - First Activity", "synchroniser");
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        changerActivite();
-                    }
-                }, DELAI_AFFICHAGE);
-        }
+        }, DELAI_AFFICHAGE);
     }
 
     //Changer d'activiter

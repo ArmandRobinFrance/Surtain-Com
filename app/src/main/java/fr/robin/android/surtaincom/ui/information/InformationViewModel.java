@@ -13,7 +13,7 @@ public class InformationViewModel extends ViewModel {
 
     public InformationViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("V00.01.00   @Copyright - Mairie de Surtainville");
+        mText.setValue("V00.00.00   @Copyright - Mairie de Surtainville");
     }
 
     /**

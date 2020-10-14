@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "444647893262",
+    "firebase_url": "https://surtain-com.firebaseio.com",
+    "project_id": "surtain-com",
+    "storage_bucket": "surtain-com.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444647893262:android:c0928005df15457d5a8f5f",
+        "android_client_info": {
+          "package_name": "fr.robin.android.surtaincom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444647893262-e1sonfkucul7j4bb04f6fpp8q06rsf6b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADjgpGXRfQ-xONhFX02apPSUTu-qissyw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444647893262-e1sonfkucul7j4bb04f6fpp8q06rsf6b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
