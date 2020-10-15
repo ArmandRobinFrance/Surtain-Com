@@ -1,10 +1,11 @@
-package fr.robin.android.surtaincom.ui.home;
+package fr.robin.android.surtaincom.ui.urgences;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,37 +20,30 @@ import fr.robin.android.surtaincom.models.bo.Article;
 import fr.robin.android.surtaincom.util.Data;
 import fr.robin.android.surtaincom.util.DatabaseHelper;
 
-public class HomeFragment extends Fragment {
+public class UrgencesFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private UrgencesViewModel viewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =  ViewModelProviders.of(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+        viewModel =  ViewModelProviders.of(this).get(UrgencesViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_urgences, container, false);
         try {
             //DATA SERVEUR
-            final TextView textViewPage1 = root.findViewById(R.id.home_page2);
-            String tag = (String) textViewPage1.getText();
+            String tag = "PAGE2";
+            WebView webView = (WebView)root.findViewById(R.id.urgence_webView);
             //
-            Article articleAndroidHome = this.getHelper().selectArticle(Cache.siteClient.getCategorieAndroid(), tag);
+            Article articleAndroid = this.getHelper().selectArticle(Cache.siteClient.getCategorieAndroid(), tag);
             //
-            if (articleAndroidHome != null) {
-                String texte = Data.getDataCorp(articleAndroidHome.getCorps());
-                textViewPage1.setText(texte);
+            if (articleAndroid != null) {
+                webView.loadDataWithBaseURL(null, Data.getDataCorp(articleAndroid.getCorps()), "text/html", "utf-8", null);
             }else{
-                textViewPage1.setText(getString (R. string.texte_vide));
+                webView.loadDataWithBaseURL(null, getString(R.string.texte_vide), "text/html", "utf-8", null);
             }
+            webView.setBackgroundColor(0x01000000);
             //
-            final TextView textView2 = root.findViewById(R.id.text_home);
-            homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-                @Override
-                public void onChanged(@Nullable String s) {
-                    textView2.setText(s);
-                }
-            });
         }catch(Exception e){
             e.printStackTrace();
-            Log.e("MAIRIE HomeFragment Exception", e.getMessage());
+            Log.e("MAIRIE UrgencesFragment Exception", e.getMessage());
         }
         return root;
     }

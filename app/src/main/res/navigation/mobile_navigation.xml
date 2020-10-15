@@ -62,7 +62,12 @@
         android:name="fr.robin.android.surtaincom.ui.gallery.GalleryFragment"
         android:label="@string/menu_partenaires"
         tools:layout="@layout/fragment_gallery" />
-
+    <fragment
+        android:id="@+id/nav_urgences"
+        android:name="fr.robin.android.surtaincom.ui.urgences.UrgencesFragment"
+        android:label="@string/menu_urgences"
+        tools:layout="@layout/fragment_urgences">
+    </fragment>
     <fragment
         android:id="@+id/nav_apropos"
         android:name="fr.robin.android.surtaincom.ui.apropos.AproposFragment"
