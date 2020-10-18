@@ -34,6 +34,7 @@ public class MainActivity extends GenericActivity {
                 R.id.nav_home,
                 R.id.nav_horaire,
                 R.id.nav_urgences,
+                R.id.nav_compterendu,
                 R.id.nav_apropos)
                 .setDrawerLayout(drawer)
                 .build();

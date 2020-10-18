@@ -21,7 +21,16 @@
         tools:layout="@layout/fragment_information">
         <action
             android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
-            app:destination="@id/nav_horaire" />
+            app:destination="@id/nav_information" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_compterendu"
+        android:name="fr.robin.android.surtaincom.ui.compteRendu.CompteRenduFragment"
+        android:label="@string/menu_compterendu"
+        tools:layout="@layout/fragment_compterendu">
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_compterendu" />
     </fragment>
     <fragment
         android:id="@+id/nav_horaire"

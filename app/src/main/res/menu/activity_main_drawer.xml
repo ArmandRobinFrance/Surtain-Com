@@ -13,6 +13,10 @@
             android:icon="@drawable/ic_menu_horloge"
             android:title="@string/menu_information" />
         <item
+            android:id="@+id/nav_compterendu"
+            android:icon="@drawable/ic_menu_horloge"
+            android:title="@string/menu_compterendu" />
+        <item
             android:id="@+id/nav_urgences"
             android:icon="@drawable/ic_phone"
             android:title="@string/menu_urgences" />

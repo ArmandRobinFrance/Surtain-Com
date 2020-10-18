@@ -29,15 +29,16 @@ public class HomeFragment extends Fragment {
         try {
             //DATA SERVEUR
             final TextView textViewPage1 = root.findViewById(R.id.home_page2);
+            //TAG
             String tag = (String) textViewPage1.getText();
+            //Par défaut
+            textViewPage1.setText(getString (R. string.texte_vide));
             //
             Article articleAndroidHome = this.getHelper().selectArticle(Cache.siteClient.getCategorieAndroid(), tag);
             //
-            if (articleAndroidHome != null) {
+            if (articleAndroidHome != null && !articleAndroidHome.getCorps().isEmpty()) {
                 String texte = Data.getDataCorp(articleAndroidHome.getCorps());
                 textViewPage1.setText(texte);
-            }else{
-                textViewPage1.setText(getString (R. string.texte_vide));
             }
             //
             final TextView textView2 = root.findViewById(R.id.text_home);

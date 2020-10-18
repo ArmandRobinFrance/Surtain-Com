@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">SURTAIN-COM</string>
-    <string name="version">V00.00.01</string>
+    <string name="version">V00.05.00</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -10,7 +10,6 @@
     <string name="action_settings">Paramètres</string>
     <string name="texte_vide">Transferts en cours avec surtainville.com ...</string>
     <!-- MENU -->
-
     <string name="menu_information">Actualités</string>
     <string name="menu_horaire">Horaires</string>
     <string name="menu_slideshow">Comptes rendus</string>
@@ -23,6 +22,9 @@
     <!-- HOME -->
     <string name="menu_home">Mairie - SURTAIN-COM</string>
     <string name="home_texte1">PAGE1</string>
+    <!-- Compte rendu -->
+    <string name="menu_compterendu">Compte rendu</string>
+    <string name="compterendu_texte1">PAGE3</string>
     <!-- URGENCE -->
     <string name="menu_urgences">Numéros d\'urgence</string>
     <string name="urgences_texte1">PAGE2</string>
@@ -61,6 +63,4 @@
     <!-- NOTIFICATION -->
     <string name="channel_name">channel_name</string>
     <string name="channel_description">channel_description</string>
-
-    <!-- ... -->
 </resources>

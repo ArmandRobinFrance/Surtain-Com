@@ -75,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:layout_marginStart="8dp"
-                android:text="Copyright"
+                android:text="\@Copyright Mairie Surtainville"
                 android:textAlignment="center"
                 android:textColor="@color/colorEcriture"
                 android:textSize="15sp"
