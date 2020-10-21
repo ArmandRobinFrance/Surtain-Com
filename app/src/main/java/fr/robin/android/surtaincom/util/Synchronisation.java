@@ -61,7 +61,7 @@ public class Synchronisation {
      */
     public void getCategories() throws IOException {
         try {
-            String data = getJSON("/wp-json/wp/v2/categories?_fields=id,name,description");
+            String data = getJSON("/wp-json/wp/v2/categories?_fields=id,name,description&per_page=20");
             Log.d("MAIRIE COM - Reception JSON", "Reception de la liste des catégories : " + data);
             if(data == null || data.length()==0){
                 return;
@@ -86,7 +86,7 @@ public class Synchronisation {
      */
     public void getArticle(int idCategorie) throws IOException {
         try {
-            String data = getJSON("/wp-json/wp/v2/posts?categories="+idCategorie+"&_fields=title");
+            String data = getJSON("/wp-json/wp/v2/posts?categories="+idCategorie+"&_fields=title&per_page=20");
             Log.d("MAIRIE COM - Reception JSON", "Reception de la liste des articles : " + data);
             if(data == null || data.length()==0){
                 return;
@@ -112,7 +112,7 @@ public class Synchronisation {
     public List<Article>  getArticles(int idCategorie) throws IOException {
         List<Article> entities = null;
         try {
-            String data = getJSON("/wp-json/wp/v2/posts?categories="+idCategorie+"&_fields=title,content");
+            String data = getJSON("/wp-json/wp/v2/posts?categories="+idCategorie+"&_fields=title,content&per_page=20");
             Log.d("MAIRIE COM - Reception JSON", "Reception de la liste des articles : " + data);
             if(data == null || data.length()==0){
                 return entities;
@@ -124,7 +124,7 @@ public class Synchronisation {
                 //jsonObject.remove("type");
                 ObjectMapper mapper = new ObjectMapper();
                 Article entity = mapper.readValue(jsonObject.toString(), Article.class);
-                entity.setCategorie(idCategorie);
+                entity.setCategories(idCategorie);
                 entities.add(entity);
                 Log.w("MAIRIE COM - Reception Article", entity.getTitle());
             }
@@ -141,7 +141,7 @@ public class Synchronisation {
      */
     public void getUtilisateurs() throws IOException {
         try {
-            String data = getJSON("/wp-json/wp/v2/users?_fields=id,name,description");
+            String data = getJSON("/wp-json/wp/v2/users?_fields=id,name,description&per_page=20");
             Log.d("MAIRIE COM - Reception JSON", "Reception de la liste des utilisateurs : " + data);
             if(data == null || data.length()==0){
                 return;

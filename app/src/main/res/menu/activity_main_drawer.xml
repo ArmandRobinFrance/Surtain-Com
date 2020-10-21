@@ -14,7 +14,7 @@
             android:title="@string/menu_information" />
         <item
             android:id="@+id/nav_compterendu"
-            android:icon="@drawable/ic_menu_horloge"
+            android:icon="@drawable/ic_pdf"
             android:title="@string/menu_compterendu" />
         <item
             android:id="@+id/nav_urgences"

@@ -93,7 +93,7 @@ public class DatabaseHelper {
 
     public void insertArticle(Article data){
         ArticleDAO dao = new ArticleDAO(this);
-        fr.robin.android.surtaincom.models.bo.Article entity = new fr.robin.android.surtaincom.models.bo.Article(1,data.getTitle(),data.getContent(),data.getCategorie());
+        fr.robin.android.surtaincom.models.bo.Article entity = new fr.robin.android.surtaincom.models.bo.Article(1,data.getTitle(),data.getContent(),data.getCategories());
         dao.insert(entity);
     }
 

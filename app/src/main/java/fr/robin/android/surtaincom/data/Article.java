@@ -6,7 +6,7 @@ public class Article {
     private BigString title;
     private String date;
     private BigString content;
-    private int categorie;
+    private int categories;
 
     public Article(){
 
@@ -52,11 +52,11 @@ public class Article {
         this.content = content;
     }
 
-    public int getCategorie() {
-        return categorie;
+    public int getCategories() {
+        return categories;
     }
 
-    public void setCategorie(int categorie) {
-        this.categorie = categorie;
+    public void setCategories(int categories) {
+        this.categories = categories;
     }
 }

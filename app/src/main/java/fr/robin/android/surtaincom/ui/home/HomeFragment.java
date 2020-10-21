@@ -34,6 +34,12 @@ public class HomeFragment extends Fragment {
             //Par défaut
             textViewPage1.setText(getString (R. string.texte_vide));
             //
+            while(!Cache.synchroniser){
+                Thread.sleep(1000);
+            }
+            if(Cache.siteClient == null){
+                return root;
+            }
             Article articleAndroidHome = this.getHelper().selectArticle(Cache.siteClient.getCategorieAndroid(), tag);
             //
             if (articleAndroidHome != null && !articleAndroidHome.getCorps().isEmpty()) {
