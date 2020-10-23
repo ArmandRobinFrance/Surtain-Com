@@ -69,8 +69,6 @@ public class BaseSQLite extends SQLiteOpenHelper {
         AdministrationTable administrationTable = new AdministrationTable();
         Log.i("MAIRIE COM", "Suppression de la table " + administrationTable.TABLE_DELETE);
         db.execSQL(administrationTable.TABLE_DELETE);
-
-
     }
 
     /**
