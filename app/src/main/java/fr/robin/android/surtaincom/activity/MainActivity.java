@@ -32,7 +32,7 @@ public class MainActivity extends GenericActivity {
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home,
-                R.id.nav_horaire,
+                R.id.nav_information,
                 R.id.nav_vie_scolaire,
                 R.id.nav_urgences,
                 R.id.nav_compterendu,

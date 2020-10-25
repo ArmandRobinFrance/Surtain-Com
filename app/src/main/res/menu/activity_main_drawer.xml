@@ -21,6 +21,10 @@
             android:icon="@drawable/ic_enfants"
             android:title="@string/menu_vie_scolaire" />
         <item
+            android:id="@+id/nav_horizon"
+            android:icon="@drawable/ic_pdf"
+            android:title="@string/menu_horizon" />
+        <item
             android:id="@+id/nav_urgences"
             android:icon="@drawable/ic_phone"
             android:title="@string/menu_urgences" />

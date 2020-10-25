@@ -33,14 +33,10 @@
             app:destination="@id/nav_compterendu" />
     </fragment>
     <fragment
-        android:id="@+id/nav_horaire"
-        android:name="fr.robin.android.surtaincom.ui.horaire.HoraireFragment"
-        android:label="@string/menu_horaire"
-        tools:layout="@layout/fragment_horaire">
-        <action
-            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
-            app:destination="@id/nav_horaire" />
-    </fragment>
+        android:id="@+id/nav_horizon"
+        android:name="fr.robin.android.surtaincom.ui.horizon.HorizonFragment"
+        android:label="@string/menu_horizon"
+        tools:layout="@layout/fragment_horizon"/>
 
     <fragment
         android:id="@+id/nav_vie_scolaire"

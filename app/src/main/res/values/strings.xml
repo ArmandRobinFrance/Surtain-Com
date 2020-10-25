@@ -24,6 +24,8 @@
     <string name="home_texte1">PAGE1</string>
     <!-- Vie scolaire -->
     <string name="menu_vie_scolaire">Vie scolaire</string>
+    <!-- Horizon -->
+    <string name="menu_horizon">Horizons</string>
     <!-- Compte rendu -->
     <string name="menu_compterendu">Comptes rendus</string>
     <string name="compterendu_texte1">PAGE3</string>
