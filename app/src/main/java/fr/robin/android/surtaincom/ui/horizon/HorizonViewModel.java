@@ -10,7 +10,6 @@ import fr.robin.android.surtaincom.util.DatabaseHelper;
 public class HorizonViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
-
     public HorizonViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("V00.00.00   @Copyright - Mairie de Surtainville");
