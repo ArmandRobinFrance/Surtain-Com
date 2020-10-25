@@ -1,4 +1,4 @@
-package fr.robin.android.surtaincom.ui.viescolaire;
+package fr.robin.android.surtaincom.ui.ecole;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -7,13 +7,13 @@ import androidx.lifecycle.ViewModel;
 import fr.robin.android.surtaincom.models.bo.Administration;
 import fr.robin.android.surtaincom.util.DatabaseHelper;
 
-public class VieScolaireViewModel extends ViewModel {
+public class EcoleViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public VieScolaireViewModel() {
+    public EcoleViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("V01.00.00   @Copyright - Mairie de Surtainville");
+        mText.setValue("V00.00.00   @Copyright - Mairie de Surtainville");
     }
 
     /**

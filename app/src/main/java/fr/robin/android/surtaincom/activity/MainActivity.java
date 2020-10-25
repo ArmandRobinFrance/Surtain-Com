@@ -33,6 +33,7 @@ public class MainActivity extends GenericActivity {
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home,
                 R.id.nav_horaire,
+                R.id.nav_vie_scolaire,
                 R.id.nav_urgences,
                 R.id.nav_compterendu,
                 R.id.nav_apropos)

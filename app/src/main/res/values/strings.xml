@@ -14,7 +14,7 @@
     <string name="menu_horaire">Horaires</string>
     <string name="menu_slideshow">Comptes rendus</string>
     <string name="menu_commissions">Commissions</string>
-    <string name="menu_vie_scolaire">Vie scolaire</string>
+
     <string name="menu_nos_commerces">Nos commerces</string>
     <string name="menu_arretes">Arrêtés municipaux</string>
     <string name="menu_partenaires">Nos partenaires</string>
@@ -22,6 +22,8 @@
     <!-- HOME -->
     <string name="menu_home">Mairie - SURTAIN-COM</string>
     <string name="home_texte1">PAGE1</string>
+    <!-- Vie scolaire -->
+    <string name="menu_vie_scolaire">Vie scolaire</string>
     <!-- Compte rendu -->
     <string name="menu_compterendu">Comptes rendus</string>
     <string name="compterendu_texte1">PAGE3</string>
