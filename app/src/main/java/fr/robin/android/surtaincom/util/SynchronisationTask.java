@@ -31,7 +31,6 @@ public class SynchronisationTask extends AsyncTask<Object, Integer, Integer> {
             }
             this.context = (Context) params[0];
             this.databaseHelper = (DatabaseHelper) params[1];
-
             try {
                     //On regarde en BDD s'il la configuration existe !
                     //...
@@ -93,12 +92,13 @@ public class SynchronisationTask extends AsyncTask<Object, Integer, Integer> {
             List<Article> articles = syncro.getArticles(categorie);
             if (articles != null && articles.size() > 0) {
                 databaseHelper.deleteArticles(categorie);
+                Iterator<Article> articles_iterator = articles.iterator();
+                while (articles_iterator.hasNext()) {
+                    databaseHelper.insertArticle(articles_iterator.next());
+                }
+            }else{
+                Log.e("MAIRIE JSON Exception", "Acces impossible aux articles ...");
             }
-            Iterator<Article> articles_iterator = articles.iterator();
-            while (articles_iterator.hasNext()) {
-                databaseHelper.insertArticle(articles_iterator.next());
-            }
-
         } catch (Exception e) {
             e.printStackTrace();
             Log.e("MAIRIE JSON Exception", e.getMessage());

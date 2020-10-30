@@ -42,6 +42,10 @@ public class InformationAdapter extends ArrayAdapter<Article> {
             //il ne reste plus qu'à remplir notre vue
             viewHolder.titre.setText(Html.fromHtml((String)infos.get("TITRE"), HtmlCompat.FROM_HTML_MODE_LEGACY));
             viewHolder.corps.setText(Html.fromHtml((String)infos.get("CONTENU"),HtmlCompat.FROM_HTML_MODE_LEGACY));
+            String url = (String)infos.get("ARTICLE");
+            if(url != null){
+                url = "";
+            }
             //
             return convertView;
     }
