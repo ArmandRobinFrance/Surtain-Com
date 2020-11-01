@@ -7,17 +7,21 @@
     android:layout_marginHorizontal="10dp"
     android:layout_marginTop="5dp"
     android:layout_marginEnd="5dp"
+    android:layout_marginBottom="5dp"
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="25dp"
         android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:background="@drawable/bouton_primaire_df"
+        android:paddingStart="50dp"
         android:text="Button"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         android:textColor="@color/blanc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
