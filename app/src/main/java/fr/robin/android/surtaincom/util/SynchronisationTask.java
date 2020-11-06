@@ -52,6 +52,7 @@ public class SynchronisationTask extends AsyncTask<Object, Integer, Integer> {
                     }
                     //VERIFICATION
                     if (Cache.siteClient == null) {
+                        //Cache.siteClient = new SiteClient("SURTAINVILLE",params );
                         return null;
                     }
                     //Acces DISTANT au site CLIENT ...
