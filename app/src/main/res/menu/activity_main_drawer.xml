@@ -25,35 +25,13 @@
             android:icon="@drawable/ic_pdf"
             android:title="@string/menu_horizon" />
         <item
-            android:id="@+id/nav_urgences"
-            android:icon="@drawable/ic_phone"
-            android:title="@string/menu_urgences" />
-        <!--
-        <item
             android:id="@+id/nav_horaire"
             android:icon="@drawable/ic_menu_horloge"
             android:title="@string/menu_horaire" />
         <item
-            android:id="@+id/nav_commission"
-            android:icon="@drawable/ic_chrome_reader_mode_black_18dp"
-            android:title="@string/menu_commissions" />
-        <item
-            android:id="@+id/nav_vie_scolaire"
-            android:icon="@drawable/ic_business_black_18dp"
-            android:title="@string/menu_vie_scolaire" />
-        <item
-            android:id="@+id/nav_commerces"
-            android:icon="@drawable/ic_web_black_18dp"
-            android:title="@string/menu_nos_commerces" />
-        <item
-            android:id="@+id/nav_arretes"
-            android:icon="@drawable/ic_assignment_black_18dp"
-            android:title="@string/menu_arretes" />
-        <item
-            android:id="@+id/nav_partenaires"
-            android:icon="@drawable/ic_supervisor_account_black_18dp"
-            android:title="@string/menu_partenaires" />
-        -->
+            android:id="@+id/nav_urgences"
+            android:icon="@drawable/ic_phone"
+            android:title="@string/menu_urgences" />
         <item
             android:id="@+id/nav_apropos"
             android:icon="@drawable/ic_recent_actors_black_18dp"

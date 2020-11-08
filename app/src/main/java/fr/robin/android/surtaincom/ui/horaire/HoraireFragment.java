@@ -11,19 +11,22 @@ import androidx.annotation.NonNull;
 import java.util.List;
 
 import fr.robin.android.surtaincom.R;
+import fr.robin.android.surtaincom.data.Cache;
 import fr.robin.android.surtaincom.models.bo.Article;
 import fr.robin.android.surtaincom.ui.GenericFragment;
 
 public class HoraireFragment extends GenericFragment {
 
-    private HoraireViewModel horaireViewModel;
+    private HoraireViewModel viewModel;
     private ListView listeView;
 
     public View onCreateView(@NonNull LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_horaire, container, false);
+
         //Lecture BDD
         this.databaseHelper = getHelper();
-        List<Article> listeArticle = null;//this.databaseHelper.selectArticle(Categorie.WORDPRESS_CATEGORIE_HORAIRE);
+        List<Article> listeArticle = this.databaseHelper.selectArticles(Cache.siteClient.getCategorieAndroid(),"HOR%");
+
         if(listeArticle != null) {
             listeView = (ListView) root.findViewById(R.id.historique_listview);
             HoraireAdapter adapter = new HoraireAdapter(this.getActivity(), listeArticle);

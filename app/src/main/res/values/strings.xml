@@ -11,7 +11,6 @@
     <string name="texte_vide">Transferts en cours avec surtainville.com ...</string>
     <!-- MENU -->
     <string name="menu_information">Actualités</string>
-    <string name="menu_horaire">Horaires</string>
     <string name="menu_slideshow">Comptes rendus</string>
     <string name="menu_commissions">Commissions</string>
 
@@ -26,6 +25,8 @@
     <string name="menu_vie_scolaire">Vie scolaire</string>
     <!-- Horizon -->
     <string name="menu_horizon">Horizons</string>
+    <!-- Hoarire -->
+    <string name="menu_horaire">Horaires &amp; services</string>
     <!-- Compte rendu -->
     <string name="menu_compterendu">Comptes rendus</string>
     <string name="compterendu_texte1">PAGE3</string>
