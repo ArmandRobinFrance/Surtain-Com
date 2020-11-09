@@ -112,7 +112,7 @@ public class Synchronisation {
     public List<Article>  getArticles(int idCategorie) throws IOException {
         List<Article> entities = null;
         try {
-            String data = getJSON("/wp-json/wp/v2/posts?categories="+idCategorie+"&_fields=title,content&per_page=20");
+            String data = getJSON("/wp-json/wp/v2/posts?categories="+idCategorie+"&_fields=title,content&per_page=100");
             Log.d("MAIRIE COM - Reception JSON", "Reception de la liste des articles : " + data);
             if(data == null || data.length()==0){
                 return entities;
