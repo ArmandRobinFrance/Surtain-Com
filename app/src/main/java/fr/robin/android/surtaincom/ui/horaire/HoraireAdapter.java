@@ -67,12 +67,13 @@ public class HoraireAdapter extends ArrayAdapter<Article> {
                 });
         }
         //ICONE
-        if(icone != null) {
-            viewHolder.imageView = (ImageView) convertView.findViewById(R.id.imageView_flag);
-            int id = getContext().getResources().getIdentifier(icone, "drawable", getContext().getPackageName());
-            if(id !=0) {
-                viewHolder.imageView.setImageResource(id);
-            }
+        if(icone == null) {
+            icone = "ic_information";
+        }
+        viewHolder.imageView = (ImageView) convertView.findViewById(R.id.imageView_flag);
+        int id = getContext().getResources().getIdentifier(icone, "drawable", getContext().getPackageName());
+        if(id !=0) {
+            viewHolder.imageView.setImageResource(id);
         }
         return convertView;
     }

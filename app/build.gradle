@@ -9,7 +9,7 @@ android {
         applicationId "fr.robin.android.surtaincom"
         minSdkVersion 26
         targetSdkVersion 29
-        versionCode 12
+        versionCode 14
         versionName "1.2.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
