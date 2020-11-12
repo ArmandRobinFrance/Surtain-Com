@@ -6,6 +6,7 @@ import android.util.Log;
 
 import java.util.List;
 
+import fr.robin.android.surtaincom.R;
 import fr.robin.android.surtaincom.data.Article;
 import fr.robin.android.surtaincom.models.bo.Administration;
 import fr.robin.android.surtaincom.models.dao.AdministrationDAO;
@@ -29,11 +30,13 @@ public class DatabaseHelper {
      */
     private SQLiteDatabase bdd;
     private BaseSQLite maBaseSQLite;
+    private Context context;
 
     /**
      * Création de la BDD et de ses tables
      */
     public DatabaseHelper(Context context) {
+        this.context = context;
         maBaseSQLite = new BaseSQLite(context, NOM_BDD, null, VERSION_BDD);
     }
 
@@ -89,6 +92,15 @@ public class DatabaseHelper {
     public Administration selectAdministration(String libelle) {
         AdministrationDAO administrationDAO = new AdministrationDAO(this);
         return administrationDAO.getAdministrationByLibelle(libelle);
+    }
+
+    public void upateAdministrationVersion(){
+        AdministrationDAO administrationDAO = new AdministrationDAO(this);
+        Administration admin = administrationDAO.getAdministrationByLibelle("VERSION");
+        admin.setValeur(this.context.getResources().getString(R.string.version));
+        if(admin != null) {
+            administrationDAO.update(admin);
+        }
     }
 
     public void insertArticle(Article data){

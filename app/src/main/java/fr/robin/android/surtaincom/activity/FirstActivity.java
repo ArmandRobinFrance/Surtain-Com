@@ -18,6 +18,7 @@ import java.util.Date;
 
 import fr.robin.android.surtaincom.R;
 import fr.robin.android.surtaincom.data.Cache;
+import fr.robin.android.surtaincom.models.dao.AdministrationDAO;
 import fr.robin.android.surtaincom.util.SynchronisationTask;
 
 public class FirstActivity extends GenericActivity {
@@ -43,6 +44,8 @@ public class FirstActivity extends GenericActivity {
                 changerActivite();
             }
         }, DELAI_AFFICHAGE);
+        //Mise à jour version
+        getHelper().upateAdministrationVersion();
     }
 
     //Changer d'activiter
